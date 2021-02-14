@@ -26,7 +26,15 @@ public class I_ODATOS {
 	public Mensaje[] cargarDatos () {
 		Mensaje vMensaje[] = new Mensaje[10];
 		
-		f = new File (fichero);
+	
+		try {
+			f = new File ("whatsapp.txt");
+			fr = new FileReader (f);
+			Scanner leer = new Scanner(fr);
+			
+		} catch (Exception e) {
+			
+		}
 		
 		
 		
