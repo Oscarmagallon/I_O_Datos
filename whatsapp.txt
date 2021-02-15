@@ -1,4 +1,4 @@
-Oscar: Hola que tal.
-Pepe: bien y tu.
-Oscar: bien.
-Pepe: vemga
+Hola que tal:Oscar 
+bien y tu: Pepe
+bien: Oscar
+venga: pepe
