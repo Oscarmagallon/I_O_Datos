@@ -7,6 +7,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutput;
+import java.io.ObjectOutputStream;
 
 public class IODatos {
 public static void guardarDatos(String rutaFichero, Password[] datos) {
@@ -22,7 +24,12 @@ public static void guardarDatos(String rutaFichero, Password[] datos) {
 		}
 		
 		try (FileOutputStream fo = new FileOutputStream(f);
-			 DataOutputStream escribir = new DataOutputStream(fo)){
+			ObjectOutputStream escribir = new ObjectOutputStream(fo)){
+			for (Password p : datos) {
+				if(p!=null) {
+					escribir.writeObject(p);
+				}
+			}
 			
 			for (Password p : datos) {
 				if (p!=null) {

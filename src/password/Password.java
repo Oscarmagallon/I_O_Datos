@@ -1,6 +1,8 @@
 package password;
 
-public class Password {
+import java.io.Serializable;
+
+public class Password implements Serializable{
 	private String usuario;
 	private int password;
 	private boolean segura; //True si es segura, false si no
