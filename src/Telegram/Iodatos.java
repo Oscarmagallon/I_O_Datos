@@ -37,8 +37,7 @@ public Mensaje[] cargarMensajesVector (String nombreFichero) {
 		leer= new Scanner (fr);
 		while(leer.hasNext()) {
 			String linea = leer.nextLine();
-			vMensaje[pos] = new Mensaje(linea);
-			pos++;
+		
 		}
 	} catch (Exception e) {
 		// TODO: handle exception
